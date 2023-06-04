@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def uppercase(str):
-    new = " "
+    new = ""
     for char in str:
         if ord('a') <= ord(char) <= ord('z'):
             char = ord(char) - 32
             new += chr(char)
         else:
             new += char
-            print("{}".format(new))
+    print("{}".format(new))
