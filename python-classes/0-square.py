@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-author: felipf
-"""
+'0-square.py'
+
 class Square():
     'Square defined'
     pass
