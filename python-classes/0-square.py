@@ -4,8 +4,10 @@
 0-square.py
 """
 
+
 class Square:
     """
     Square defined
     """
+
     pass
