@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-'0-square.py'
+# -*- coding: utf-8 -*-
+"""
+0-square.py
+"""
 
 class Square:
-    'Square defined'
+    """
+    Square defined
+    """
     pass
