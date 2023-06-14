@@ -15,7 +15,7 @@ class Square:
         """
         size predefined
         """
-        self.__size = size
+        self.size = size
         self.position = position
 
     @property
