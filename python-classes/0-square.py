@@ -7,3 +7,5 @@ class Square():
     """
     Square defined
     """
+
+    pass
