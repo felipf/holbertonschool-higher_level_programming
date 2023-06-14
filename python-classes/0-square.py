@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '0-square.py'
 
-class Square():
+class Square:
     'Square defined'
     pass
