@@ -10,10 +10,8 @@ class Square:
     """
     Square defined
     """
-
-
-def __init__(self, size):
-    """
-    size added to square
-    """
-    self.__size = size
+    def __init__(self, size):
+        """
+        size added to square
+        """
+        self.__size = size
