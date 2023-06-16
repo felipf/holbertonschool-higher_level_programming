@@ -37,6 +37,11 @@ zeroAsBothArgs:
 	>>> add_integer(0, 0)
 	0
 
+ValueError - NaN:
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
 OverflowError - Infinity:
 	>>> add_integer(float('inf'))
 	Traceback (most recent call last):
