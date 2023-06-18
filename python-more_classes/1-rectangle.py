@@ -5,6 +5,9 @@ task 1
 
 
 class Rectangle():
+    """
+    creating a rectangle
+    """
     def __init__(self, width=0, height=0):
         """
         checking
