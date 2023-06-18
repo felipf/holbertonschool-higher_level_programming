@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-task 3
+task 4
 """
 
 
@@ -65,3 +65,6 @@ class Rectangle():
             if i < (self.__height) - 1:
                 strr += "\n"
         return strr
+
+    def __repr__(self):
+        return f'Rectangle:({self.__width}, {self.__height})'
