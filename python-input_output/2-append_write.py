@@ -4,7 +4,7 @@ task 2
 """
 
 
-def write_file(filename="", text=""):
+def append_file(filename="", text=""):
     """
     appends str at end of file and returns n char
     """
