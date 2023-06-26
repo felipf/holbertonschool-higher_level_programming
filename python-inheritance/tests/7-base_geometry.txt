@@ -1,0 +1,56 @@
+The `7-base_geometry` module
+======================
+
+Using ``{function}``
+-------------------
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	>>> bg = BaseGeometry()
+
+Testing()
+
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+0.
+	>>> bg.integer_validator("Jon", 12)
+
+1.
+	>>> bg.integer_validator("Jon", "Snow")
+	Traceback (most recent call last):
+	TypeError: Jon must be an integer
+
+2.
+	>>> bg.integer_validator("Jon", -1)
+	Traceback (most recent call last):
+	ValueError: Jon must be greater than 0
+
+3.
+	>>> bg.integer_validator("Jon", 0)
+	Traceback (most recent call last):
+	ValueError: Jon must be greater than 0
+
+4.
+	>>> bg.integer_validator(1, 2)
+
+5.
+	>>> bg.integer_validator("Jon")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+6.
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+7.
+	>>> bg.integer_validator("Jon", [1, 2, 3])
+	Traceback (most recent call last):
+	TypeError: Jon must be an integer
+
+8.
+	>>> bg.integer_validator("Jon", None)
+	Traceback (most recent call last):
+	TypeError: Jon must be an integer
