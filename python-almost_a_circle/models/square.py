@@ -18,12 +18,12 @@ class Square(Rectangle):
         """
         return (
             f"[Square] ({self.id}) {self.x}/{self.y}"
-            f" - {self.width}"
+            f" - {self.size}"
         )
 
     @property
     def size(self):
-        return self.width
+        return self.size
 
     @size.setter
     def size(self, value):
@@ -31,8 +31,7 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.width = value
-        self.height = value
+        self.__size = value
 
     def update(self, *args, **kwargs):
         if args and len(args) != 0:
@@ -51,8 +50,8 @@ class Square(Rectangle):
         return  ( 
             {
                 'id': self.id,
-                'size': self.size,
-                'x': self.x,
-                'y': self.y
+                'size': self.__size,
+                'x': self.__x,
+                'y': self.__y
             }
         )
