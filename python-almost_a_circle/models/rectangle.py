@@ -81,5 +81,57 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        "Returns the area"
+        """
+        Returns the area
+        """
         return (self.__width * self.__height)
+
+    def display(self):
+        """
+        prints the rectangle instance
+        """
+        for y in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for x in range(self.__x):
+                print(" ", end="")
+            for j in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """
+        str representation
+        """
+        return (
+            f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
+            f" - {self.__width}/{self.__height}"
+        )
+
+    def update(self, *args, **kwargs):
+        """
+        args in all attributes
+        """
+        if args and len(args) != 0:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
+    def to_dictionary(self):
+        return (
+            {
+                "id": self.id,
+                "width": self.__width,
+                "height": self.__height,
+                "x": self.__x,
+                "y": self.__y
+            }
+        )
