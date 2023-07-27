@@ -10,7 +10,7 @@ if __name__ == "__main__":
                          user=argv[1], passwd=argv[2], db=argv[3])
     """ interact cursor with database """
     cur = db.cursor()
-    """ execute query """ 
+    """ execute query """
     cur.execute("SELECT * FROM states ORDER BY id")
     """ fetch rows as list """
     states = cur.fetchall()
