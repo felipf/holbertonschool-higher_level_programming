@@ -3,7 +3,6 @@
 import MySQLdb
 from sys import argv
 
-
 if __name__ == "__main__":
     """db connection"""
     db = MySQLdb.connect(host="localhost", port=3306,
@@ -11,7 +10,7 @@ if __name__ == "__main__":
     """interact cursor with database"""
     cur = db.cursor()
     """execute query"""
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id")
     """fetch rows as list"""
     states = cur.fetchall()
 
