@@ -16,7 +16,6 @@ if __name__ == "__main__":
             LIKE BINARY '%{}%' ORDER BY id""".format(argv[4]))
     """fetch rows as list"""
     states = cur.fetchall()
-
     for state in states:
         print(state)
     """close cursor and database"""
