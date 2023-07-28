@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """script that lists all State objects from the database"""
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-from sys import argv
+from sqlalchemy import (create_engine)
+import sys
 from model_state import Base, State
 
 
